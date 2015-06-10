@@ -56,6 +56,7 @@
 		EA4A012C1B2880D70032A02A /* MyAwarenessTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAwarenessTests.m; sourceTree = "<group>"; };
 		EAD13F6F1B2887E10079F26D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EAD13F711B28881F0079F26D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		EAD13F721B289EEF0079F26D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +80,7 @@
 		EA4A01041B2880D70032A02A = {
 			isa = PBXGroup;
 			children = (
+				EAD13F721B289EEF0079F26D /* README.md */,
 				EA4A010F1B2880D70032A02A /* MyAwareness */,
 				EA4A01291B2880D70032A02A /* MyAwarenessTests */,
 				EA4A010E1B2880D70032A02A /* Products */,
