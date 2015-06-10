@@ -3,8 +3,10 @@
 // Copyright (c) 2015 luosai. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "SettingTableViewCell.h"
 
 
-@interface SettingViewController : UITableViewController
+@implementation SettingTableViewCell {
+
+}
 @end

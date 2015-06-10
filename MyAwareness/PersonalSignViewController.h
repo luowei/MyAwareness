@@ -6,5 +6,5 @@
 #import <UIKit/UIKit.h>
 
 
-@interface SettingViewController : UITableViewController
+@interface PersonalSignViewController : UIViewController
 @end

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		BEF06075EF81D4E118F75E2A /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0624C222F5E412D74E487 /* SettingViewController.m */; };
+		BEF062AE18C8C2FE14E8A237 /* PersonalSignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF061BFDB571F9513A76093 /* PersonalSignViewController.m */; };
+		BEF063646993DA1C944C0881 /* SettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06DB0D9FC00D0A1978D47 /* SettingTableViewCell.m */; };
+		BEF065C941ACA5F1C4841DC8 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06BB70F832C14815B5B66 /* AboutViewController.m */; };
+		BEF068FE0FE66B4EDF7F0FF6 /* ScanQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06CAC3DABDEE07EA97B71 /* ScanQRViewController.m */; };
 		EA4A01131B2880D70032A02A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4A01121B2880D70032A02A /* main.m */; };
 		EA4A01161B2880D70032A02A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4A01151B2880D70032A02A /* AppDelegate.m */; };
 		EA4A01191B2880D70032A02A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4A01181B2880D70032A02A /* ViewController.m */; };
@@ -28,8 +32,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BEF06008C80A493CD437C1A9 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		BEF0605B20B968EDEC6F29CE /* PersonalSignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalSignViewController.h; sourceTree = "<group>"; };
+		BEF061BFDB571F9513A76093 /* PersonalSignViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalSignViewController.m; sourceTree = "<group>"; };
 		BEF0624C222F5E412D74E487 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		BEF063212CB25E9EB4ABE399 /* ScanQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanQRViewController.h; sourceTree = "<group>"; };
 		BEF064F991B97415A5E23B81 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		BEF06BB4E21D4588C3ABDAB0 /* SettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewCell.h; sourceTree = "<group>"; };
+		BEF06BB70F832C14815B5B66 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		BEF06CAC3DABDEE07EA97B71 /* ScanQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanQRViewController.m; sourceTree = "<group>"; };
+		BEF06DB0D9FC00D0A1978D47 /* SettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewCell.m; sourceTree = "<group>"; };
 		EA4A010D1B2880D70032A02A /* MyAwareness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAwareness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA4A01111B2880D70032A02A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA4A01121B2880D70032A02A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -94,6 +106,14 @@
 				EA4A01101B2880D70032A02A /* Supporting Files */,
 				BEF0624C222F5E412D74E487 /* SettingViewController.m */,
 				BEF064F991B97415A5E23B81 /* SettingViewController.h */,
+				BEF06DB0D9FC00D0A1978D47 /* SettingTableViewCell.m */,
+				BEF06BB4E21D4588C3ABDAB0 /* SettingTableViewCell.h */,
+				BEF061BFDB571F9513A76093 /* PersonalSignViewController.m */,
+				BEF0605B20B968EDEC6F29CE /* PersonalSignViewController.h */,
+				BEF06CAC3DABDEE07EA97B71 /* ScanQRViewController.m */,
+				BEF063212CB25E9EB4ABE399 /* ScanQRViewController.h */,
+				BEF06BB70F832C14815B5B66 /* AboutViewController.m */,
+				BEF06008C80A493CD437C1A9 /* AboutViewController.h */,
 			);
 			path = MyAwareness;
 			sourceTree = "<group>";
@@ -229,6 +249,10 @@
 				EA4A01161B2880D70032A02A /* AppDelegate.m in Sources */,
 				EA4A01131B2880D70032A02A /* main.m in Sources */,
 				BEF06075EF81D4E118F75E2A /* SettingViewController.m in Sources */,
+				BEF063646993DA1C944C0881 /* SettingTableViewCell.m in Sources */,
+				BEF062AE18C8C2FE14E8A237 /* PersonalSignViewController.m in Sources */,
+				BEF068FE0FE66B4EDF7F0FF6 /* ScanQRViewController.m in Sources */,
+				BEF065C941ACA5F1C4841DC8 /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
