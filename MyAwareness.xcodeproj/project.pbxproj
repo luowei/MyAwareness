@@ -13,6 +13,19 @@
 		EA4A011E1B2880D70032A02A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA4A011D1B2880D70032A02A /* Images.xcassets */; };
 		EA4A01211B2880D70032A02A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA4A011F1B2880D70032A02A /* LaunchScreen.xib */; };
 		EA4A012D1B2880D70032A02A /* MyAwarenessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4A012C1B2880D70032A02A /* MyAwarenessTests.m */; };
+		EA9DC8CA1B29EEA9009C3CA9 /* icon_session.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9DC8BD1B29EEA9009C3CA9 /* icon_session.png */; };
+		EA9DC8CB1B29EEA9009C3CA9 /* icon_session@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9DC8BE1B29EEA9009C3CA9 /* icon_session@2x.png */; };
+		EA9DC8CC1B29EEA9009C3CA9 /* icon_timeline.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9DC8BF1B29EEA9009C3CA9 /* icon_timeline.png */; };
+		EA9DC8CD1B29EEA9009C3CA9 /* icon_timeline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9DC8C01B29EEA9009C3CA9 /* icon_timeline@2x.png */; };
+		EA9DC8CF1B29EEA9009C3CA9 /* WeixinActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9DC8C51B29EEA9009C3CA9 /* WeixinActivity.m */; };
+		EA9DC8D01B29EEA9009C3CA9 /* WeixinSessionActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9DC8C71B29EEA9009C3CA9 /* WeixinSessionActivity.m */; };
+		EA9DC8D11B29EEA9009C3CA9 /* WeixinTimelineActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9DC8C91B29EEA9009C3CA9 /* WeixinTimelineActivity.m */; };
+		EA9DC8D91B29FBAC009C3CA9 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9DC8D81B29FBAC009C3CA9 /* libsqlite3.0.dylib */; };
+		EA9DC8DB1B29FBB6009C3CA9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9DC8DA1B29FBB6009C3CA9 /* libz.dylib */; };
+		EA9DC8DD1B29FBCB009C3CA9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9DC8DC1B29FBCA009C3CA9 /* SystemConfiguration.framework */; };
+		EA9DC8E21B29FCC5009C3CA9 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9DC8DE1B29FCC5009C3CA9 /* libWeChatSDK.a */; };
+		EA9DC8E31B29FCC5009C3CA9 /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = EA9DC8DF1B29FCC5009C3CA9 /* read_me.txt */; };
+		EA9DC8E51B29FD74009C3CA9 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9DC8E41B29FD74009C3CA9 /* libc++.dylib */; };
 		EACCD2D51B295F9C0040DC78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EACCD2D71B295F9C0040DC78 /* Main.storyboard */; };
 		EACCD2E41B2971350040DC78 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = EACCD2DA1B2971350040DC78 /* FMDatabase.m */; };
 		EACCD2E51B2971350040DC78 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EACCD2DC1B2971350040DC78 /* FMDatabaseAdditions.m */; };
@@ -21,7 +34,6 @@
 		EACCD2E81B2971350040DC78 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = EACCD2E31B2971350040DC78 /* FMResultSet.m */; };
 		EACCD2EB1B2979A70040DC78 /* Summary.m in Sources */ = {isa = PBXBuildFile; fileRef = EACCD2EA1B2979A70040DC78 /* Summary.m */; };
 		EACCD2EE1B297CB10040DC78 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EACCD2ED1B297CB10040DC78 /* DBManager.m */; };
-		EACCD2F01B2999F60040DC78 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACCD2EF1B2999F60040DC78 /* libsqlite3.dylib */; };
 		EACCD3251B299CB90040DC78 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACCD3241B299CB90040DC78 /* ViewController.m */; };
 		EACCD3281B299D630040DC78 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACCD3271B299D630040DC78 /* ListViewController.m */; };
 		EAD13F6E1B2887E10079F26D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAD13F701B2887E10079F26D /* Localizable.strings */; };
@@ -56,6 +68,24 @@
 		EA4A01261B2880D70032A02A /* MyAwarenessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyAwarenessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA4A012B1B2880D70032A02A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA4A012C1B2880D70032A02A /* MyAwarenessTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAwarenessTests.m; sourceTree = "<group>"; };
+		EA9DC8BD1B29EEA9009C3CA9 /* icon_session.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_session.png; sourceTree = "<group>"; };
+		EA9DC8BE1B29EEA9009C3CA9 /* icon_session@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_session@2x.png"; sourceTree = "<group>"; };
+		EA9DC8BF1B29EEA9009C3CA9 /* icon_timeline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_timeline.png; sourceTree = "<group>"; };
+		EA9DC8C01B29EEA9009C3CA9 /* icon_timeline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_timeline@2x.png"; sourceTree = "<group>"; };
+		EA9DC8C41B29EEA9009C3CA9 /* WeixinActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeixinActivity.h; sourceTree = "<group>"; };
+		EA9DC8C51B29EEA9009C3CA9 /* WeixinActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeixinActivity.m; sourceTree = "<group>"; };
+		EA9DC8C61B29EEA9009C3CA9 /* WeixinSessionActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeixinSessionActivity.h; sourceTree = "<group>"; };
+		EA9DC8C71B29EEA9009C3CA9 /* WeixinSessionActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeixinSessionActivity.m; sourceTree = "<group>"; };
+		EA9DC8C81B29EEA9009C3CA9 /* WeixinTimelineActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeixinTimelineActivity.h; sourceTree = "<group>"; };
+		EA9DC8C91B29EEA9009C3CA9 /* WeixinTimelineActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeixinTimelineActivity.m; sourceTree = "<group>"; };
+		EA9DC8D81B29FBAC009C3CA9 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		EA9DC8DA1B29FBB6009C3CA9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		EA9DC8DC1B29FBCA009C3CA9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EA9DC8DE1B29FCC5009C3CA9 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		EA9DC8DF1B29FCC5009C3CA9 /* read_me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = read_me.txt; sourceTree = "<group>"; };
+		EA9DC8E01B29FCC5009C3CA9 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		EA9DC8E11B29FCC5009C3CA9 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		EA9DC8E41B29FD74009C3CA9 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		EACCD2D61B295F9C0040DC78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EACCD2D91B2971350040DC78 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		EACCD2DA1B2971350040DC78 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
@@ -97,7 +127,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EACCD2F01B2999F60040DC78 /* libsqlite3.dylib in Frameworks */,
+				EA9DC8E51B29FD74009C3CA9 /* libc++.dylib in Frameworks */,
+				EA9DC8DD1B29FBCB009C3CA9 /* SystemConfiguration.framework in Frameworks */,
+				EA9DC8DB1B29FBB6009C3CA9 /* libz.dylib in Frameworks */,
+				EA9DC8E21B29FCC5009C3CA9 /* libWeChatSDK.a in Frameworks */,
+				EA9DC8D91B29FBAC009C3CA9 /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,8 +180,13 @@
 		EA4A01041B2880D70032A02A = {
 			isa = PBXGroup;
 			children = (
+				EA9DC8E41B29FD74009C3CA9 /* libc++.dylib */,
+				EA9DC8DC1B29FBCA009C3CA9 /* SystemConfiguration.framework */,
+				EA9DC8DA1B29FBB6009C3CA9 /* libz.dylib */,
+				EA9DC8D81B29FBAC009C3CA9 /* libsqlite3.0.dylib */,
 				EACCD2EF1B2999F60040DC78 /* libsqlite3.dylib */,
 				EAD13F721B289EEF0079F26D /* README.md */,
+				EA9DC8BB1B29EEA9009C3CA9 /* WeixinActivity */,
 				EACCD2D81B2971350040DC78 /* fmdb */,
 				EA4A010F1B2880D70032A02A /* MyAwareness */,
 				EA4A01291B2880D70032A02A /* MyAwarenessTests */,
@@ -207,6 +246,35 @@
 				EA4A012B1B2880D70032A02A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA9DC8BB1B29EEA9009C3CA9 /* WeixinActivity */ = {
+			isa = PBXGroup;
+			children = (
+				EA9DC8BC1B29EEA9009C3CA9 /* Resources */,
+				EA9DC8C41B29EEA9009C3CA9 /* WeixinActivity.h */,
+				EA9DC8C51B29EEA9009C3CA9 /* WeixinActivity.m */,
+				EA9DC8C61B29EEA9009C3CA9 /* WeixinSessionActivity.h */,
+				EA9DC8C71B29EEA9009C3CA9 /* WeixinSessionActivity.m */,
+				EA9DC8C81B29EEA9009C3CA9 /* WeixinTimelineActivity.h */,
+				EA9DC8C91B29EEA9009C3CA9 /* WeixinTimelineActivity.m */,
+			);
+			path = WeixinActivity;
+			sourceTree = "<group>";
+		};
+		EA9DC8BC1B29EEA9009C3CA9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EA9DC8DE1B29FCC5009C3CA9 /* libWeChatSDK.a */,
+				EA9DC8DF1B29FCC5009C3CA9 /* read_me.txt */,
+				EA9DC8E01B29FCC5009C3CA9 /* WXApi.h */,
+				EA9DC8E11B29FCC5009C3CA9 /* WXApiObject.h */,
+				EA9DC8BD1B29EEA9009C3CA9 /* icon_session.png */,
+				EA9DC8BE1B29EEA9009C3CA9 /* icon_session@2x.png */,
+				EA9DC8BF1B29EEA9009C3CA9 /* icon_timeline.png */,
+				EA9DC8C01B29EEA9009C3CA9 /* icon_timeline@2x.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		EACCD2D81B2971350040DC78 /* fmdb */ = {
@@ -307,9 +375,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA9DC8CD1B29EEA9009C3CA9 /* icon_timeline@2x.png in Resources */,
+				EA9DC8CB1B29EEA9009C3CA9 /* icon_session@2x.png in Resources */,
+				EA9DC8CA1B29EEA9009C3CA9 /* icon_session.png in Resources */,
 				EAD13F6E1B2887E10079F26D /* Localizable.strings in Resources */,
 				EA4A01211B2880D70032A02A /* LaunchScreen.xib in Resources */,
 				EA4A011E1B2880D70032A02A /* Images.xcassets in Resources */,
+				EA9DC8CC1B29EEA9009C3CA9 /* icon_timeline.png in Resources */,
+				EA9DC8E31B29FCC5009C3CA9 /* read_me.txt in Resources */,
 				EACCD2D51B295F9C0040DC78 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,11 +402,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EACCD2EB1B2979A70040DC78 /* Summary.m in Sources */,
+				EA9DC8D01B29EEA9009C3CA9 /* WeixinSessionActivity.m in Sources */,
 				EAD13F801B289FEB0079F26D /* ScanQRViewController.m in Sources */,
 				EAD13F7E1B289FEB0079F26D /* AboutViewController.m in Sources */,
 				EACCD2E41B2971350040DC78 /* FMDatabase.m in Sources */,
 				EAD13F811B289FEB0079F26D /* SettingTableViewCell.m in Sources */,
 				EACCD2E71B2971350040DC78 /* FMDatabaseQueue.m in Sources */,
+				EA9DC8CF1B29EEA9009C3CA9 /* WeixinActivity.m in Sources */,
 				EACCD2E81B2971350040DC78 /* FMResultSet.m in Sources */,
 				EACCD3281B299D630040DC78 /* ListViewController.m in Sources */,
 				EACCD2E61B2971350040DC78 /* FMDatabasePool.m in Sources */,
@@ -341,6 +416,7 @@
 				EAD13F821B289FEB0079F26D /* SettingViewController.m in Sources */,
 				EACCD3251B299CB90040DC78 /* ViewController.m in Sources */,
 				EA4A01161B2880D70032A02A /* AppDelegate.m in Sources */,
+				EA9DC8D11B29EEA9009C3CA9 /* WeixinTimelineActivity.m in Sources */,
 				EA4A01131B2880D70032A02A /* main.m in Sources */,
 				EAD13F7F1B289FEB0079F26D /* PersonalSignViewController.m in Sources */,
 				EACCD2E51B2971350040DC78 /* FMDatabaseAdditions.m in Sources */,
@@ -485,6 +561,10 @@
 				INFOPLIST_FILE = MyAwareness/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WeixinActivity/Resources",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -498,6 +578,10 @@
 				INFOPLIST_FILE = MyAwareness/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WeixinActivity/Resources",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

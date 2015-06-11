@@ -11,6 +11,8 @@
 #import <Foundation/Foundation.h>
 #import "Defines.h"
 
+@class Summary;
+
 @interface DBManager : NSObject
 
 singleton_interface(DBManager)
@@ -19,10 +21,13 @@ singleton_interface(DBManager)
 
 - (BOOL)insertContent:(NSString *)content;
 
-- (BOOL)updateContent:(NSString *)content byId:(NSInteger)_id;
+- (BOOL)updateContent:(NSString *)content byId:(NSNumber *)_id;
+
+- (Summary *)findById:(NSNumber *)_id;
 
 - (NSArray *)listContent;
 
 - (BOOL)clearAll;
 
+- (NSArray *)findByContent:(NSString *)awareness;
 @end

@@ -12,6 +12,8 @@
 #import "Summary.h"
 #import "DBManager.h"
 #import "AwarenessViewController.h"
+#import "WeixinSessionActivity.h"
+#import "WeixinTimelineActivity.h"
 
 
 @interface ListViewController ()
@@ -25,16 +27,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+
     if (![[NSUserDefaults standardUserDefaults] boolForKey:TABLECREATED_KEY]) {
         BOOL res = [[DBManager sharedDBManager] createTable];
         [[NSUserDefaults standardUserDefaults] setBool:res forKey:TABLECREATED_KEY];
     }
 
-    self.awarenessList = [NSMutableArray arrayWithArray:[[DBManager sharedDBManager] listContent]];
+    self.awarenessList = [[DBManager sharedDBManager] listContent];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.tableView.separatorInset = UIEdgeInsetsMake(0, 15, 0, 15);
-    if(IS_OS_8_OR_LATER){
+    if (IS_OS_8_OR_LATER) {
         self.tableView.layoutMargins = UIEdgeInsetsZero;
     }
 
@@ -44,7 +46,19 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                                                                            target:self
                                                                                            action:@selector(addTabItems)];
-    
+
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+//    self.awarenessList = [NSMutableArray arrayWithArray:[[DBManager sharedDBManager] listContent]];
+    [self.tableView reloadData];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 
@@ -67,33 +81,25 @@
 
 }
 
+
+//添加一条记录
 - (void)addTabItems {
     AwarenessViewController *viewController = [AwarenessViewController new];
     viewController.title = ADD_AWARENESS;
-    
+
     //添加感悟回调block
-    viewController.updateAwarenessItemBlock = ^(NSString *awareness){
-        if(awareness==nil || [[awareness stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length]==0){
+    viewController.updateAwarenessItemBlock = ^(NSString *awareness) {
+        if (awareness == nil || [[awareness stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length] == 0) {
             return;
         }
-        [_awarenessList insertObject:awareness atIndex:0];
+
         [[DBManager sharedDBManager] insertContent:awareness];
+        Summary *summary = [[DBManager sharedDBManager] findByContent:awareness][0];
+        [_awarenessList insertObject:summary atIndex:0];
     };
-    
+
     [viewController setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:viewController animated:YES];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-
-//    self.awarenessList = [NSMutableArray arrayWithArray:[[DBManager sharedDBManager] listContent]];
-    [self.tableView reloadData];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
@@ -114,10 +120,13 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellID];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
-//    cell.myImage = _status[(NSUInteger) indexPath.row];
 
-    Summary *summary = (Summary *)_awarenessList[(NSUInteger) indexPath.row];
-    cell.tag = [summary.sid integerValue];
+    UIButton *shareBtn = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    [shareBtn addTarget:self action:@selector(shareAwareness:) forControlEvents:UIControlEventTouchUpInside];
+    cell.accessoryView = shareBtn;
+
+    Summary *summary = (Summary *) _awarenessList[(NSUInteger) indexPath.row];
+    cell.tag = [summary._id integerValue];
     cell.textLabel.text = summary.content;
     cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
     NSDateFormatter *formatter = [NSDateFormatter new];
@@ -125,6 +134,38 @@
     cell.detailTextLabel.text = [formatter stringFromDate:summary.createTime];
 
     return cell;
+}
+
+//分享感悟
+- (void)shareAwareness:(id)shareAwareness {
+    NSString *textToShare = @"要分享的文本内容";
+//    NSURL *urlToShare = [NSURL URLWithString:@"http://rootls.com"];
+//    UIImage *imageToShare = [UIImage imageNamed:@""];
+    NSArray *activityItems = @[textToShare,/*urlToShare,imageToShare*/];
+
+    NSArray *activities = @[[[WeixinSessionActivity alloc] init], [[WeixinTimelineActivity alloc] init]];
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems
+                                                                             applicationActivities:activities];
+
+    //初始化completionHandler，当post结束之后（无论是done还是cancel)被调用
+    activityVC.completionHandler = ^(NSString *activityType, BOOL completed) {
+        NSLog(@"activityType :%@", activityType);
+        if (completed) {
+            NSLog(@"completed");
+        }
+        else {
+            NSLog(@"cancel");
+        }
+
+        //放回上一级界面
+        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    };
+
+    //添加排除
+    activityVC.excludedActivityTypes = @[UIActivityTypeAssignToContact,UIActivityTypePrint];
+
+    //以模态的方式展现activityVC。
+    [self presentViewController:activityVC animated:YES completion:nil];
 }
 
 
@@ -147,19 +188,19 @@
     return UITableViewCellEditingStyleDelete;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//编辑一条记录
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
 //    [self modifyOftenuseWordsList:indexPath cell:cell];
     AwarenessViewController *viewController = [AwarenessViewController new];
     viewController.awareness = cell.textLabel.text;
     viewController.title = EDIT_AWARENESS;
-    viewController.updateAwarenessItemBlock = ^(NSString *awareness){
-        if(awareness ==nil || [[awareness stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length]==0){
+    viewController.updateAwarenessItemBlock = ^(NSString *awareness) {
+        if (awareness == nil || [[awareness stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length] == 0) {
             return;
         }
-        _awarenessList[(NSUInteger) indexPath.row] = awareness;
-
-        [[DBManager sharedDBManager] updateContent:awareness byId:cell.tag];
+        [[DBManager sharedDBManager] updateContent:awareness byId:@(cell.tag)];
+        _awarenessList[(NSUInteger) indexPath.row] = [[DBManager sharedDBManager] findById:@(cell.tag)];
     };
 
     [viewController setHidesBottomBarWhenPushed:YES];

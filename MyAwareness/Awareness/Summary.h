@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Summary : NSObject
+@interface Summary : NSObject<NSCoding>
 
-@property NSNumber *sid;
-@property NSString *content;
-@property NSDate *createTime;
+@property(nonatomic, strong) NSNumber *_id;
+@property(nonatomic, copy) NSString *content;
+@property(nonatomic, strong) NSDate *createTime;
 
 
 - (instancetype)initWithDictionary:(NSDictionary *)dic;

@@ -23,7 +23,7 @@
     if (self = [super init]) {
         self.createTime = createTime;
         self.content = content;
-        self.sid = _id;
+        self._id = _id;
     }
     return self;
 }

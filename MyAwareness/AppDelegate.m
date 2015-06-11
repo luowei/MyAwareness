@@ -10,6 +10,7 @@
 #import "ViewController.h"
 #import "SettingViewController.h"
 #import "ListViewController.h"
+#import "WXApi.h"
 
 @interface AppDelegate ()<UITabBarControllerDelegate, UINavigationControllerDelegate>
 
@@ -22,6 +23,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+
+    [WXApi registerApp:@"wxcefa411f34485347"];
 
     self.tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.delegate = self;
