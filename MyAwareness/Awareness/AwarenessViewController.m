@@ -1,20 +1,21 @@
 //
-// Created by luowei on 15/6/10.
-// Copyright (c) 2015 luosai. All rights reserved.
+//  AwarenessViewController.m
+//  MyAwareness
+//
+//  Created by luowei on 15/6/11.
+//  Copyright (c) 2015 luosai. All rights reserved.
 //
 
-#import "PersonalSignViewController.h"
+#import "AwarenessViewController.h"
 
-@interface PersonalSignViewController()<UITextViewDelegate>
+@interface AwarenessViewController()<UITextViewDelegate>
 
 @property(nonatomic, strong) UITextView *textView;
 
 @end
 
 
-@implementation PersonalSignViewController {
-
-}
+@implementation AwarenessViewController
 
 //设置字体
 - (void)textViewDidChange:(UITextView *)textView {
@@ -43,7 +44,7 @@
 - (void)savePersonalSign {
 
     //更新table
-    self.updateSignBlock(self.textView.text);
+    self.updateAwarenessItemBlock(self.textView.text);
 
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -54,7 +55,7 @@
 
     //激活输入焦点
     [self.textView becomeFirstResponder];
-    self.textView.text = self.personalSign;
+    self.textView.text = self.awareness;
     self.textView.attributedText = [[NSAttributedString alloc]
             initWithString:self.textView.text attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:16]}];
 
@@ -108,5 +109,7 @@
     self.textView.contentInset = contentInsets;
     self.textView.scrollIndicatorInsets = contentInsets;
 }
+
+
 
 @end

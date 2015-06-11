@@ -7,4 +7,8 @@
 
 
 @interface PersonalSignViewController : UIViewController
+
+@property(nonatomic, copy) NSString *personalSign;
+@property(nonatomic, copy) void (^updateSignBlock)(NSString *);
+
 @end

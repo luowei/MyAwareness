@@ -2,8 +2,8 @@
 //  ViewController.m
 //  MyAwareness
 //
-//  Created by luowei on 15/6/10.
-//  Copyright (c) 2015年 luosai. All rights reserved.
+//  Created by luowei on 15/6/11.
+//  Copyright (c) 2015年 wodedata. All rights reserved.
 //
 
 #import "ViewController.h"

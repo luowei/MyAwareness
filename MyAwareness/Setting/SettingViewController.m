@@ -8,6 +8,7 @@
 #import "PersonalSignViewController.h"
 #import "ScanQRViewController.h"
 #import "AboutViewController.h"
+#import "Defines.h"
 
 
 @interface SettingViewController ()
@@ -21,10 +22,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.settings = @[@"个性签名",@"扫描二维码",@"关于"];
+    self.settings = @[@"个性签名", @"扫描二维码", @"关于"];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    [self.tableView reloadData];
+}
+
 
 #pragma mark TableViewDatasource Implements
 
@@ -40,11 +48,28 @@
     static NSString *identtityKey = @"setting_tableview_cell";
     SettingTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:identtityKey];
     if (cell == nil) {
-        cell = [[SettingTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identtityKey];
+        cell = [[SettingTableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identtityKey];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
 //    cell.myImage = _status[(NSUInteger) indexPath.row];
-    cell.textLabel.text = _settings[(NSUInteger) indexPath.row];
+    
+    switch (indexPath.row){
+        case 0:{
+            cell.textLabel.text = _settings[(NSUInteger) indexPath.row];
+            NSString *sign = [[NSUserDefaults standardUserDefaults] objectForKey:PERSONALSIGN_KEY];
+            cell.detailTextLabel.text = sign;
+            break;
+        }
+        case 1:{
+            cell.textLabel.text = _settings[(NSUInteger) indexPath.row];
+            break;
+        }
+        default: {
+            cell.textLabel.text = _settings[(NSUInteger) indexPath.row];
+            break;
+        }
+    }
+    
     return cell;
 }
 
@@ -55,34 +80,47 @@
     return 1;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIViewController *viewController = nil;
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    switch (indexPath.row){
-        case 0:{
-            viewController = [PersonalSignViewController new];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    __weak UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    switch (indexPath.row) {
+        case 0: {
+            PersonalSignViewController *viewController = [PersonalSignViewController new];
             viewController.title = cell.textLabel.text;
             viewController.view.backgroundColor = [UIColor whiteColor];
+            viewController.personalSign = cell.detailTextLabel.text;
+
+            //更新签名回调block
+            viewController.updateSignBlock = ^(NSString *sign) {
+                [[NSUserDefaults standardUserDefaults] setObject:sign forKey:PERSONALSIGN_KEY];
+                cell.detailTextLabel.text = sign;
+            };
+
+            [viewController setHidesBottomBarWhenPushed:YES];
+            [self.navigationController pushViewController:viewController animated:YES];
             break;
         }
-        case 1:{
-            viewController = [ScanQRViewController new];
+        case 1: {
+            ScanQRViewController *viewController = [ScanQRViewController new];
             viewController.title = cell.textLabel.text;
             viewController.view.backgroundColor = [UIColor whiteColor];
+
+            [viewController setHidesBottomBarWhenPushed:YES];
+            [self.navigationController pushViewController:viewController animated:YES];
             break;
         }
-        case 2:{
-            viewController = [AboutViewController new];
+        case 2: {
+            AboutViewController *viewController = [AboutViewController new];
             viewController.title = cell.textLabel.text;
             viewController.view.backgroundColor = [UIColor whiteColor];
+
+            [viewController setHidesBottomBarWhenPushed:YES];
+            [self.navigationController pushViewController:viewController animated:YES];
             break;
         }
         default:
             break;
     }
 
-    [viewController setHidesBottomBarWhenPushed:YES];
-    [self.navigationController pushViewController:viewController animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 

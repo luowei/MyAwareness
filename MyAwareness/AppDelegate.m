@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "SettingViewController.h"
+#import "ListViewController.h"
 
 @interface AppDelegate ()<UITabBarControllerDelegate, UINavigationControllerDelegate>
 
@@ -25,7 +26,8 @@
     self.tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.delegate = self;
 
-    ViewController *viewController = [UIStoryboard storyboardWithName:@"Main" bundle:nil].instantiateInitialViewController;
+//    ViewController *viewController = [UIStoryboard storyboardWithName:@"Main" bundle:nil].instantiateInitialViewController;
+    ListViewController *viewController = [ListViewController new];
     viewController.title = @"我的感悟";
     viewController.view.backgroundColor = [UIColor whiteColor];
     viewController.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemHistory tag:10];
