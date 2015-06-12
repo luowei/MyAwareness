@@ -16,7 +16,7 @@
 #import "WeixinTimelineActivity.h"
 
 
-@interface ListViewController ()
+@interface ListViewController ()<WXApiDelegate>
 
 @property(nonatomic, strong) NSMutableArray *awarenessList;
 
@@ -33,7 +33,8 @@
         [[NSUserDefaults standardUserDefaults] setBool:res forKey:TABLECREATED_KEY];
     }
 
-    self.awarenessList = [[DBManager sharedDBManager] listContent];
+    self.awarenessList = @[].mutableCopy;
+    [self.awarenessList arrayByAddingObjectsFromArray:[[DBManager sharedDBManager] listContent]];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.tableView.separatorInset = UIEdgeInsetsMake(0, 15, 0, 15);
     if (IS_OS_8_OR_LATER) {
@@ -122,6 +123,7 @@
     }
 
     UIButton *shareBtn = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    shareBtn.tag = indexPath.row;
     [shareBtn addTarget:self action:@selector(shareAwareness:) forControlEvents:UIControlEventTouchUpInside];
     cell.accessoryView = shareBtn;
 
@@ -137,15 +139,17 @@
 }
 
 //分享感悟
-- (void)shareAwareness:(id)shareAwareness {
-    NSString *textToShare = @"要分享的文本内容";
-//    NSURL *urlToShare = [NSURL URLWithString:@"http://rootls.com"];
-//    UIImage *imageToShare = [UIImage imageNamed:@""];
-    NSArray *activityItems = @[textToShare,/*urlToShare,imageToShare*/];
+- (void)shareAwareness:(UIButton *)shareBtn {
+
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:shareBtn.tag inSection:0];
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
 
     NSArray *activities = @[[[WeixinSessionActivity alloc] init], [[WeixinTimelineActivity alloc] init]];
-    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems
-                                                                             applicationActivities:activities];
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:@[
+            cell.textLabel.text,
+//            [UIImage imageNamed:@"Oauth"],
+            [NSURL URLWithString:@"http://www.wodedata.com"]
+    ] applicationActivities:activities];
 
     //初始化completionHandler，当post结束之后（无论是done还是cancel)被调用
     activityVC.completionHandler = ^(NSString *activityType, BOOL completed) {
@@ -161,10 +165,7 @@
         [self.navigationController dismissViewControllerAnimated:YES completion:nil];
     };
 
-    //添加排除
-    activityVC.excludedActivityTypes = @[UIActivityTypeAssignToContact,UIActivityTypePrint];
-
-    //以模态的方式展现activityVC。
+    activityVC.excludedActivityTypes = @[UIActivityTypeAssignToContact, UIActivityTypeCopyToPasteboard, UIActivityTypePrint];
     [self presentViewController:activityVC animated:YES completion:nil];
 }
 

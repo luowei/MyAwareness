@@ -13,19 +13,23 @@
 		EA4A011E1B2880D70032A02A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA4A011D1B2880D70032A02A /* Images.xcassets */; };
 		EA4A01211B2880D70032A02A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA4A011F1B2880D70032A02A /* LaunchScreen.xib */; };
 		EA4A012D1B2880D70032A02A /* MyAwarenessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4A012C1B2880D70032A02A /* MyAwarenessTests.m */; };
-		EA9DC8CA1B29EEA9009C3CA9 /* icon_session.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9DC8BD1B29EEA9009C3CA9 /* icon_session.png */; };
-		EA9DC8CB1B29EEA9009C3CA9 /* icon_session@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9DC8BE1B29EEA9009C3CA9 /* icon_session@2x.png */; };
-		EA9DC8CC1B29EEA9009C3CA9 /* icon_timeline.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9DC8BF1B29EEA9009C3CA9 /* icon_timeline.png */; };
-		EA9DC8CD1B29EEA9009C3CA9 /* icon_timeline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA9DC8C01B29EEA9009C3CA9 /* icon_timeline@2x.png */; };
-		EA9DC8CF1B29EEA9009C3CA9 /* WeixinActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9DC8C51B29EEA9009C3CA9 /* WeixinActivity.m */; };
-		EA9DC8D01B29EEA9009C3CA9 /* WeixinSessionActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9DC8C71B29EEA9009C3CA9 /* WeixinSessionActivity.m */; };
-		EA9DC8D11B29EEA9009C3CA9 /* WeixinTimelineActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9DC8C91B29EEA9009C3CA9 /* WeixinTimelineActivity.m */; };
+		EA88C34C1B2A77E000C2100E /* WeixinActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = EA88C34B1B2A77E000C2100E /* WeixinActivity.m */; };
 		EA9DC8D91B29FBAC009C3CA9 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9DC8D81B29FBAC009C3CA9 /* libsqlite3.0.dylib */; };
 		EA9DC8DB1B29FBB6009C3CA9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9DC8DA1B29FBB6009C3CA9 /* libz.dylib */; };
 		EA9DC8DD1B29FBCB009C3CA9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9DC8DC1B29FBCA009C3CA9 /* SystemConfiguration.framework */; };
-		EA9DC8E21B29FCC5009C3CA9 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9DC8DE1B29FCC5009C3CA9 /* libWeChatSDK.a */; };
-		EA9DC8E31B29FCC5009C3CA9 /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = EA9DC8DF1B29FCC5009C3CA9 /* read_me.txt */; };
 		EA9DC8E51B29FD74009C3CA9 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9DC8E41B29FD74009C3CA9 /* libc++.dylib */; };
+		EACB95731B2A7694002EE691 /* icon_session-8.png in Resources */ = {isa = PBXBuildFile; fileRef = EACB95601B2A7694002EE691 /* icon_session-8.png */; };
+		EACB95741B2A7694002EE691 /* icon_session-8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EACB95611B2A7694002EE691 /* icon_session-8@2x.png */; };
+		EACB95751B2A7694002EE691 /* icon_session.png in Resources */ = {isa = PBXBuildFile; fileRef = EACB95621B2A7694002EE691 /* icon_session.png */; };
+		EACB95761B2A7694002EE691 /* icon_session@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EACB95631B2A7694002EE691 /* icon_session@2x.png */; };
+		EACB95771B2A7694002EE691 /* icon_timeline-8.png in Resources */ = {isa = PBXBuildFile; fileRef = EACB95641B2A7694002EE691 /* icon_timeline-8.png */; };
+		EACB95781B2A7694002EE691 /* icon_timeline-8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EACB95651B2A7694002EE691 /* icon_timeline-8@2x.png */; };
+		EACB95791B2A7694002EE691 /* icon_timeline.png in Resources */ = {isa = PBXBuildFile; fileRef = EACB95661B2A7694002EE691 /* icon_timeline.png */; };
+		EACB957A1B2A7694002EE691 /* icon_timeline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EACB95671B2A7694002EE691 /* icon_timeline@2x.png */; };
+		EACB957B1B2A7694002EE691 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EACB95681B2A7694002EE691 /* libWeChatSDK.a */; };
+		EACB957D1B2A7694002EE691 /* WeixinActivityBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EACB956E1B2A7694002EE691 /* WeixinActivityBase.m */; };
+		EACB957E1B2A7694002EE691 /* WeixinSessionActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = EACB95701B2A7694002EE691 /* WeixinSessionActivity.m */; };
+		EACB957F1B2A7694002EE691 /* WeixinTimelineActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = EACB95721B2A7694002EE691 /* WeixinTimelineActivity.m */; };
 		EACCD2D51B295F9C0040DC78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EACCD2D71B295F9C0040DC78 /* Main.storyboard */; };
 		EACCD2E41B2971350040DC78 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = EACCD2DA1B2971350040DC78 /* FMDatabase.m */; };
 		EACCD2E51B2971350040DC78 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EACCD2DC1B2971350040DC78 /* FMDatabaseAdditions.m */; };
@@ -68,24 +72,29 @@
 		EA4A01261B2880D70032A02A /* MyAwarenessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyAwarenessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA4A012B1B2880D70032A02A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA4A012C1B2880D70032A02A /* MyAwarenessTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAwarenessTests.m; sourceTree = "<group>"; };
-		EA9DC8BD1B29EEA9009C3CA9 /* icon_session.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_session.png; sourceTree = "<group>"; };
-		EA9DC8BE1B29EEA9009C3CA9 /* icon_session@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_session@2x.png"; sourceTree = "<group>"; };
-		EA9DC8BF1B29EEA9009C3CA9 /* icon_timeline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_timeline.png; sourceTree = "<group>"; };
-		EA9DC8C01B29EEA9009C3CA9 /* icon_timeline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_timeline@2x.png"; sourceTree = "<group>"; };
-		EA9DC8C41B29EEA9009C3CA9 /* WeixinActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeixinActivity.h; sourceTree = "<group>"; };
-		EA9DC8C51B29EEA9009C3CA9 /* WeixinActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeixinActivity.m; sourceTree = "<group>"; };
-		EA9DC8C61B29EEA9009C3CA9 /* WeixinSessionActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeixinSessionActivity.h; sourceTree = "<group>"; };
-		EA9DC8C71B29EEA9009C3CA9 /* WeixinSessionActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeixinSessionActivity.m; sourceTree = "<group>"; };
-		EA9DC8C81B29EEA9009C3CA9 /* WeixinTimelineActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeixinTimelineActivity.h; sourceTree = "<group>"; };
-		EA9DC8C91B29EEA9009C3CA9 /* WeixinTimelineActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeixinTimelineActivity.m; sourceTree = "<group>"; };
+		EA88C34B1B2A77E000C2100E /* WeixinActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeixinActivity.m; sourceTree = "<group>"; };
 		EA9DC8D81B29FBAC009C3CA9 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		EA9DC8DA1B29FBB6009C3CA9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		EA9DC8DC1B29FBCA009C3CA9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		EA9DC8DE1B29FCC5009C3CA9 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
-		EA9DC8DF1B29FCC5009C3CA9 /* read_me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = read_me.txt; sourceTree = "<group>"; };
-		EA9DC8E01B29FCC5009C3CA9 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
-		EA9DC8E11B29FCC5009C3CA9 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		EA9DC8E41B29FD74009C3CA9 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		EACB95601B2A7694002EE691 /* icon_session-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_session-8.png"; sourceTree = "<group>"; };
+		EACB95611B2A7694002EE691 /* icon_session-8@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_session-8@2x.png"; sourceTree = "<group>"; };
+		EACB95621B2A7694002EE691 /* icon_session.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_session.png; sourceTree = "<group>"; };
+		EACB95631B2A7694002EE691 /* icon_session@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_session@2x.png"; sourceTree = "<group>"; };
+		EACB95641B2A7694002EE691 /* icon_timeline-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_timeline-8.png"; sourceTree = "<group>"; };
+		EACB95651B2A7694002EE691 /* icon_timeline-8@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_timeline-8@2x.png"; sourceTree = "<group>"; };
+		EACB95661B2A7694002EE691 /* icon_timeline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_timeline.png; sourceTree = "<group>"; };
+		EACB95671B2A7694002EE691 /* icon_timeline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_timeline@2x.png"; sourceTree = "<group>"; };
+		EACB95681B2A7694002EE691 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		EACB95691B2A7694002EE691 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		EACB956A1B2A7694002EE691 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		EACB956B1B2A7694002EE691 /* WeixinActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeixinActivity.h; sourceTree = "<group>"; };
+		EACB956D1B2A7694002EE691 /* WeixinActivityBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeixinActivityBase.h; sourceTree = "<group>"; };
+		EACB956E1B2A7694002EE691 /* WeixinActivityBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeixinActivityBase.m; sourceTree = "<group>"; };
+		EACB956F1B2A7694002EE691 /* WeixinSessionActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeixinSessionActivity.h; sourceTree = "<group>"; };
+		EACB95701B2A7694002EE691 /* WeixinSessionActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeixinSessionActivity.m; sourceTree = "<group>"; };
+		EACB95711B2A7694002EE691 /* WeixinTimelineActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeixinTimelineActivity.h; sourceTree = "<group>"; };
+		EACB95721B2A7694002EE691 /* WeixinTimelineActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeixinTimelineActivity.m; sourceTree = "<group>"; };
 		EACCD2D61B295F9C0040DC78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EACCD2D91B2971350040DC78 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		EACCD2DA1B2971350040DC78 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
@@ -130,8 +139,8 @@
 				EA9DC8E51B29FD74009C3CA9 /* libc++.dylib in Frameworks */,
 				EA9DC8DD1B29FBCB009C3CA9 /* SystemConfiguration.framework in Frameworks */,
 				EA9DC8DB1B29FBB6009C3CA9 /* libz.dylib in Frameworks */,
-				EA9DC8E21B29FCC5009C3CA9 /* libWeChatSDK.a in Frameworks */,
 				EA9DC8D91B29FBAC009C3CA9 /* libsqlite3.0.dylib in Frameworks */,
+				EACB957B1B2A7694002EE691 /* libWeChatSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,8 +195,8 @@
 				EA9DC8D81B29FBAC009C3CA9 /* libsqlite3.0.dylib */,
 				EACCD2EF1B2999F60040DC78 /* libsqlite3.dylib */,
 				EAD13F721B289EEF0079F26D /* README.md */,
-				EA9DC8BB1B29EEA9009C3CA9 /* WeixinActivity */,
 				EACCD2D81B2971350040DC78 /* fmdb */,
+				EACB955E1B2A7694002EE691 /* WeixinActivity */,
 				EA4A010F1B2880D70032A02A /* MyAwareness */,
 				EA4A01291B2880D70032A02A /* MyAwarenessTests */,
 				EA4A010E1B2880D70032A02A /* Products */,
@@ -248,31 +257,36 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		EA9DC8BB1B29EEA9009C3CA9 /* WeixinActivity */ = {
+		EACB955E1B2A7694002EE691 /* WeixinActivity */ = {
 			isa = PBXGroup;
 			children = (
-				EA9DC8BC1B29EEA9009C3CA9 /* Resources */,
-				EA9DC8C41B29EEA9009C3CA9 /* WeixinActivity.h */,
-				EA9DC8C51B29EEA9009C3CA9 /* WeixinActivity.m */,
-				EA9DC8C61B29EEA9009C3CA9 /* WeixinSessionActivity.h */,
-				EA9DC8C71B29EEA9009C3CA9 /* WeixinSessionActivity.m */,
-				EA9DC8C81B29EEA9009C3CA9 /* WeixinTimelineActivity.h */,
-				EA9DC8C91B29EEA9009C3CA9 /* WeixinTimelineActivity.m */,
+				EACB955F1B2A7694002EE691 /* Resources */,
+				EACB956B1B2A7694002EE691 /* WeixinActivity.h */,
+				EA88C34B1B2A77E000C2100E /* WeixinActivity.m */,
+				EACB956D1B2A7694002EE691 /* WeixinActivityBase.h */,
+				EACB956E1B2A7694002EE691 /* WeixinActivityBase.m */,
+				EACB956F1B2A7694002EE691 /* WeixinSessionActivity.h */,
+				EACB95701B2A7694002EE691 /* WeixinSessionActivity.m */,
+				EACB95711B2A7694002EE691 /* WeixinTimelineActivity.h */,
+				EACB95721B2A7694002EE691 /* WeixinTimelineActivity.m */,
 			);
 			path = WeixinActivity;
 			sourceTree = "<group>";
 		};
-		EA9DC8BC1B29EEA9009C3CA9 /* Resources */ = {
+		EACB955F1B2A7694002EE691 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EA9DC8DE1B29FCC5009C3CA9 /* libWeChatSDK.a */,
-				EA9DC8DF1B29FCC5009C3CA9 /* read_me.txt */,
-				EA9DC8E01B29FCC5009C3CA9 /* WXApi.h */,
-				EA9DC8E11B29FCC5009C3CA9 /* WXApiObject.h */,
-				EA9DC8BD1B29EEA9009C3CA9 /* icon_session.png */,
-				EA9DC8BE1B29EEA9009C3CA9 /* icon_session@2x.png */,
-				EA9DC8BF1B29EEA9009C3CA9 /* icon_timeline.png */,
-				EA9DC8C01B29EEA9009C3CA9 /* icon_timeline@2x.png */,
+				EACB95601B2A7694002EE691 /* icon_session-8.png */,
+				EACB95611B2A7694002EE691 /* icon_session-8@2x.png */,
+				EACB95621B2A7694002EE691 /* icon_session.png */,
+				EACB95631B2A7694002EE691 /* icon_session@2x.png */,
+				EACB95641B2A7694002EE691 /* icon_timeline-8.png */,
+				EACB95651B2A7694002EE691 /* icon_timeline-8@2x.png */,
+				EACB95661B2A7694002EE691 /* icon_timeline.png */,
+				EACB95671B2A7694002EE691 /* icon_timeline@2x.png */,
+				EACB95681B2A7694002EE691 /* libWeChatSDK.a */,
+				EACB95691B2A7694002EE691 /* WXApi.h */,
+				EACB956A1B2A7694002EE691 /* WXApiObject.h */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -358,6 +372,7 @@
 			knownRegions = (
 				Base,
 				"zh-Hans",
+				en,
 			);
 			mainGroup = EA4A01041B2880D70032A02A;
 			productRefGroup = EA4A010E1B2880D70032A02A /* Products */;
@@ -375,14 +390,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA9DC8CD1B29EEA9009C3CA9 /* icon_timeline@2x.png in Resources */,
-				EA9DC8CB1B29EEA9009C3CA9 /* icon_session@2x.png in Resources */,
-				EA9DC8CA1B29EEA9009C3CA9 /* icon_session.png in Resources */,
 				EAD13F6E1B2887E10079F26D /* Localizable.strings in Resources */,
+				EACB95741B2A7694002EE691 /* icon_session-8@2x.png in Resources */,
 				EA4A01211B2880D70032A02A /* LaunchScreen.xib in Resources */,
+				EACB95781B2A7694002EE691 /* icon_timeline-8@2x.png in Resources */,
 				EA4A011E1B2880D70032A02A /* Images.xcassets in Resources */,
-				EA9DC8CC1B29EEA9009C3CA9 /* icon_timeline.png in Resources */,
-				EA9DC8E31B29FCC5009C3CA9 /* read_me.txt in Resources */,
+				EACB95791B2A7694002EE691 /* icon_timeline.png in Resources */,
+				EACB95761B2A7694002EE691 /* icon_session@2x.png in Resources */,
+				EACB95771B2A7694002EE691 /* icon_timeline-8.png in Resources */,
+				EACB957A1B2A7694002EE691 /* icon_timeline@2x.png in Resources */,
+				EACB95731B2A7694002EE691 /* icon_session-8.png in Resources */,
+				EACB95751B2A7694002EE691 /* icon_session.png in Resources */,
 				EACCD2D51B295F9C0040DC78 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,22 +419,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EACB957D1B2A7694002EE691 /* WeixinActivityBase.m in Sources */,
 				EACCD2EB1B2979A70040DC78 /* Summary.m in Sources */,
-				EA9DC8D01B29EEA9009C3CA9 /* WeixinSessionActivity.m in Sources */,
 				EAD13F801B289FEB0079F26D /* ScanQRViewController.m in Sources */,
 				EAD13F7E1B289FEB0079F26D /* AboutViewController.m in Sources */,
 				EACCD2E41B2971350040DC78 /* FMDatabase.m in Sources */,
 				EAD13F811B289FEB0079F26D /* SettingTableViewCell.m in Sources */,
+				EA88C34C1B2A77E000C2100E /* WeixinActivity.m in Sources */,
 				EACCD2E71B2971350040DC78 /* FMDatabaseQueue.m in Sources */,
-				EA9DC8CF1B29EEA9009C3CA9 /* WeixinActivity.m in Sources */,
 				EACCD2E81B2971350040DC78 /* FMResultSet.m in Sources */,
 				EACCD3281B299D630040DC78 /* ListViewController.m in Sources */,
+				EACB957F1B2A7694002EE691 /* WeixinTimelineActivity.m in Sources */,
 				EACCD2E61B2971350040DC78 /* FMDatabasePool.m in Sources */,
+				EACB957E1B2A7694002EE691 /* WeixinSessionActivity.m in Sources */,
 				EACCD2EE1B297CB10040DC78 /* DBManager.m in Sources */,
 				EAD13F821B289FEB0079F26D /* SettingViewController.m in Sources */,
 				EACCD3251B299CB90040DC78 /* ViewController.m in Sources */,
 				EA4A01161B2880D70032A02A /* AppDelegate.m in Sources */,
-				EA9DC8D11B29EEA9009C3CA9 /* WeixinTimelineActivity.m in Sources */,
 				EA4A01131B2880D70032A02A /* main.m in Sources */,
 				EAD13F7F1B289FEB0079F26D /* PersonalSignViewController.m in Sources */,
 				EACCD2E51B2971350040DC78 /* FMDatabaseAdditions.m in Sources */,

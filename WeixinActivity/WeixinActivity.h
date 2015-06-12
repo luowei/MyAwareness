@@ -2,18 +2,15 @@
 //  WeixinActivity.h
 //  WeixinActivity
 //
-//  Created by Johnny iDay on 13-12-2.
-//  Copyright (c) 2013年 Johnny iDay. All rights reserved.
+//  Created by Johnny iDay on 14-1-26.
+//  Copyright (c) 2014年 Johnny iDay. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "WXApi.h"
+#import <Foundation/Foundation.h>
 
-@interface WeixinActivity : UIActivity {
-    NSString *title;
-    UIImage *image;
-    NSURL *url;
-    enum WXScene scene;
-}
+#import "WeixinTimelineActivity.h"
+#import "WeixinSessionActivity.h"
+
+@interface WeixinActivity : NSObject
 
 @end
