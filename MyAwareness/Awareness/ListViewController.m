@@ -34,7 +34,7 @@
     }
 
     self.awarenessList = @[].mutableCopy;
-    [self.awarenessList arrayByAddingObjectsFromArray:[[DBManager sharedDBManager] listContent]];
+    [self.awarenessList addObjectsFromArray:[[DBManager sharedDBManager] listContent]];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.tableView.separatorInset = UIEdgeInsetsMake(0, 15, 0, 15);
     if (IS_OS_8_OR_LATER) {
