@@ -30,4 +30,6 @@ singleton_interface(DBManager)
 - (BOOL)clearAll;
 
 - (NSArray *)findByContent:(NSString *)awareness;
+
+- (BOOL)deleteById:(NSNumber *)_id;
 @end

@@ -41,9 +41,9 @@
         self.tableView.layoutMargins = UIEdgeInsetsZero;
     }
 
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
-                                                                                          target:self
-                                                                                          action:@selector(startEditTabItems)];
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
+//                                                                                          target:self
+//                                                                                          action:@selector(startEditTabItems)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                                                                            target:self
                                                                                            action:@selector(addTabItems)];
@@ -68,13 +68,13 @@
 
     //编辑
     if (self.tableView.editing) {
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]
                 initWithBarButtonSystemItem:UIBarButtonSystemItemSave
                                      target:self
                                      action:@selector(startEditTabItems)];
         //保存
     } else {
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]
                 initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
                                      target:self
                                      action:@selector(startEditTabItems)];
@@ -187,6 +187,16 @@
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
     return UITableViewCellEditingStyleDelete;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+
+    [[DBManager sharedDBManager] deleteById:(@(cell.tag))];
+
+    [_awarenessList removeObjectAtIndex:(NSUInteger) indexPath.row];
+    [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 //编辑一条记录

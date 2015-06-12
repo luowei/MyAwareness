@@ -110,6 +110,18 @@ singleton_implementation(DBManager)
     return data.count > 0 ? data : nil;
 }
 
+
+- (BOOL)deleteById:(NSNumber *)_id {
+    BOOL res = NO;
+    FMDatabase *db = [FMDatabase databaseWithPath:PATH_OF_DB];
+    if ([db open]) {
+        NSString *sql = @"delete from summary where id = ?";
+        res = [db executeUpdate:sql,_id];
+        [db close];
+    }
+    return res;
+}
+
 - (BOOL)clearAll {
     BOOL res = NO;
     FMDatabase *db = [FMDatabase databaseWithPath:PATH_OF_DB];
