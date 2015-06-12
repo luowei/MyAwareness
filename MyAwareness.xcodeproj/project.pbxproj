@@ -14,6 +14,7 @@
 		EA4A01211B2880D70032A02A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA4A011F1B2880D70032A02A /* LaunchScreen.xib */; };
 		EA4A012D1B2880D70032A02A /* MyAwarenessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4A012C1B2880D70032A02A /* MyAwarenessTests.m */; };
 		EA88C34C1B2A77E000C2100E /* WeixinActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = EA88C34B1B2A77E000C2100E /* WeixinActivity.m */; };
+		EA88C34F1B2A8DA300C2100E /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = EA88C34E1B2A8DA300C2100E /* read_me.txt */; };
 		EA9DC8D91B29FBAC009C3CA9 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9DC8D81B29FBAC009C3CA9 /* libsqlite3.0.dylib */; };
 		EA9DC8DB1B29FBB6009C3CA9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9DC8DA1B29FBB6009C3CA9 /* libz.dylib */; };
 		EA9DC8DD1B29FBCB009C3CA9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9DC8DC1B29FBCA009C3CA9 /* SystemConfiguration.framework */; };
@@ -73,6 +74,7 @@
 		EA4A012B1B2880D70032A02A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA4A012C1B2880D70032A02A /* MyAwarenessTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAwarenessTests.m; sourceTree = "<group>"; };
 		EA88C34B1B2A77E000C2100E /* WeixinActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeixinActivity.m; sourceTree = "<group>"; };
+		EA88C34E1B2A8DA300C2100E /* read_me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = read_me.txt; sourceTree = "<group>"; };
 		EA9DC8D81B29FBAC009C3CA9 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		EA9DC8DA1B29FBB6009C3CA9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		EA9DC8DC1B29FBCA009C3CA9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -285,6 +287,7 @@
 				EACB95661B2A7694002EE691 /* icon_timeline.png */,
 				EACB95671B2A7694002EE691 /* icon_timeline@2x.png */,
 				EACB95681B2A7694002EE691 /* libWeChatSDK.a */,
+				EA88C34E1B2A8DA300C2100E /* read_me.txt */,
 				EACB95691B2A7694002EE691 /* WXApi.h */,
 				EACB956A1B2A7694002EE691 /* WXApiObject.h */,
 			);
@@ -396,6 +399,7 @@
 				EACB95781B2A7694002EE691 /* icon_timeline-8@2x.png in Resources */,
 				EA4A011E1B2880D70032A02A /* Images.xcassets in Resources */,
 				EACB95791B2A7694002EE691 /* icon_timeline.png in Resources */,
+				EA88C34F1B2A8DA300C2100E /* read_me.txt in Resources */,
 				EACB95761B2A7694002EE691 /* icon_session@2x.png in Resources */,
 				EACB95771B2A7694002EE691 /* icon_timeline-8.png in Resources */,
 				EACB957A1B2A7694002EE691 /* icon_timeline@2x.png in Resources */,
