@@ -24,7 +24,8 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 
-    [WXApi registerApp:@"wxcefa411f34485347"];
+    //我的感悟
+    [WXApi registerApp:@"wx4e0d6fbe4c4bb54b"];
 
     self.tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.delegate = self;
